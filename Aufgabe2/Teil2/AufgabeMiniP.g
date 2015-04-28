@@ -3,23 +3,23 @@ grammar AufgabeMiniP;
 
 start		:	PROGRAM declaration*  BEGIN statement+ END; 
 declaration	:	DATATYPE ID (COMMA ID)* SEM;
-statement       :	(assignment | read_statement | while_statement | if_statement | println) SEM;
+statement       :	(assignment | read_statement | while_statement | if_statement | println)^ SEM!;
 
 
-assignment      :	ID ASSIGNOR (arithmetik	| compare | STRINGCONST | BOOLEANCONST);
+assignment      :	ID ASSIGNOR^ (arithmetik  | compare | STRINGCONST | BOOLEANCONST);
 read_statement 	: 	READ OPENROUND ID CLOSEROUND;
-while_statement :	WHILE compare DO statement* OD; 
+while_statement :	WHILE^ compare DO! statement* OD!; 
 if_statement    :       IF compare THEN statement+ (ELSE statement+)?  FI; 
 
 
-compare 	:	OPENROUND (ID | constants) COMPARATOR (ID | constants) CLOSEROUND;
-println 	:	PRINTLN OPENROUND(ID | STRINGCONST) CLOSEROUND;
+compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
+println 	:	PRINTLN^ OPENROUND!(ID | STRINGCONST) CLOSEROUND!;
 
 constants	:	BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST;
 
-arithmetik	:	mult_expression(ADD_SUB mult_expression)*;
-mult_expression :       atom(MULT_DIV atom)* ;
-atom		:       ADD_SUB? (INTEGERCONST | REALCONST) | OPENROUND arithmetik CLOSEROUND | ID;
+arithmetik	:	mult_expression(ADD_SUB^ mult_expression)*;
+mult_expression :       atom(MULT_DIV^ atom)* ;
+atom		:       ADD_SUB^? (INTEGERCONST | REALCONST) | OPENROUND! arithmetik CLOSEROUND! | ID;
 
 
 OD		:       'od';	

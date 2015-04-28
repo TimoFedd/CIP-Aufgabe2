@@ -1,4 +1,4 @@
-// $ANTLR 3.4 C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g 2015-04-08 16:45:57
+// $ANTLR 3.4 C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g 2015-04-28 19:12:27
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -8,7 +8,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class AufgabeMiniPLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__34=34;
     public static final int ADD_SUB=4;
     public static final int ASSIGNOR=5;
     public static final int BEGIN=6;
@@ -53,36 +52,15 @@ public class AufgabeMiniPLexer extends Lexer {
     public AufgabeMiniPLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g"; }
-
-    // $ANTLR start "T__34"
-    public final void mT__34() throws RecognitionException {
-        try {
-            int _type = T__34;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:2:7: ( '-' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:2:9: '-'
-            {
-            match('-'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__34"
+    public String getGrammarFileName() { return "C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g"; }
 
     // $ANTLR start "OD"
     public final void mOD() throws RecognitionException {
         try {
             int _type = OD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:24:5: ( 'od' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:24:13: 'od'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:25:5: ( 'od' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:25:13: 'od'
             {
             match("od"); 
 
@@ -104,8 +82,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = DO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:25:5: ( 'do' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:25:13: 'do'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:26:5: ( 'do' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:26:13: 'do'
             {
             match("do"); 
 
@@ -127,8 +105,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = WHILE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:26:9: ( 'while' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:26:17: 'while'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:27:9: ( 'while' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:27:17: 'while'
             {
             match("while"); 
 
@@ -150,8 +128,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = READ;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:27:8: ( 'read' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:27:10: 'read'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:28:8: ( 'read' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:28:10: 'read'
             {
             match("read"); 
 
@@ -173,7 +151,7 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = COMPARATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:13: ( '=' | '<>' | '<' | '<=' | '>' | '>=' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:13: ( '=' | '<>' | '<' | '<=' | '>' | '>=' )
             int alt1=6;
             switch ( input.LA(1) ) {
             case '=':
@@ -222,14 +200,14 @@ public class AufgabeMiniPLexer extends Lexer {
 
             switch (alt1) {
                 case 1 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:15: '='
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:15: '='
                     {
                     match('='); 
 
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:21: '<>'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:21: '<>'
                     {
                     match("<>"); 
 
@@ -238,14 +216,14 @@ public class AufgabeMiniPLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:28: '<'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:28: '<'
                     {
                     match('<'); 
 
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:34: '<='
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:34: '<='
                     {
                     match("<="); 
 
@@ -254,14 +232,14 @@ public class AufgabeMiniPLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:41: '>'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:41: '>'
                     {
                     match('>'); 
 
                     }
                     break;
                 case 6 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:28:47: '>='
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:29:47: '>='
                     {
                     match(">="); 
 
@@ -285,8 +263,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = ASSIGNOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:29:10: ( ':=' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:29:12: ':='
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:30:10: ( ':=' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:30:12: ':='
             {
             match(":="); 
 
@@ -308,8 +286,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = IF;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:30:6: ( 'if' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:30:8: 'if'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:31:6: ( 'if' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:31:8: 'if'
             {
             match("if"); 
 
@@ -331,8 +309,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = THEN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:31:8: ( 'then' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:31:10: 'then'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:32:8: ( 'then' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:32:10: 'then'
             {
             match("then"); 
 
@@ -354,8 +332,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = ELSE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:32:8: ( 'else' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:32:10: 'else'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:33:8: ( 'else' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:33:10: 'else'
             {
             match("else"); 
 
@@ -377,8 +355,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = FI;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:33:5: ( 'fi' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:33:7: 'fi'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:34:5: ( 'fi' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:34:7: 'fi'
             {
             match("fi"); 
 
@@ -400,8 +378,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = END;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:34:7: ( 'end' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:34:9: 'end'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:35:7: ( 'end' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:35:9: 'end'
             {
             match("end"); 
 
@@ -423,8 +401,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = PROGRAM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:35:10: ( 'program' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:35:12: 'program'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:36:10: ( 'program' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:36:12: 'program'
             {
             match("program"); 
 
@@ -446,8 +424,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = BEGIN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:36:8: ( 'begin' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:36:10: 'begin'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:37:8: ( 'begin' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:37:10: 'begin'
             {
             match("begin"); 
 
@@ -469,8 +447,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = PRINTLN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:37:10: ( 'println' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:37:12: 'println'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:38:10: ( 'println' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:38:12: 'println'
             {
             match("println"); 
 
@@ -492,7 +470,7 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = DATATYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:38:17: ( 'integer' | 'real' | 'string' | 'boolean' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:39:17: ( 'integer' | 'real' | 'string' | 'boolean' )
             int alt2=4;
             switch ( input.LA(1) ) {
             case 'i':
@@ -525,7 +503,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:38:19: 'integer'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:39:19: 'integer'
                     {
                     match("integer"); 
 
@@ -534,7 +512,7 @@ public class AufgabeMiniPLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:38:31: 'real'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:39:31: 'real'
                     {
                     match("real"); 
 
@@ -543,7 +521,7 @@ public class AufgabeMiniPLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:38:40: 'string'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:39:40: 'string'
                     {
                     match("string"); 
 
@@ -552,7 +530,7 @@ public class AufgabeMiniPLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:38:51: 'boolean'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:39:51: 'boolean'
                     {
                     match("boolean"); 
 
@@ -576,8 +554,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = OPENROUND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:41:11: ( '(' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:41:14: '('
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:41:11: ( '(' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:41:14: '('
             {
             match('('); 
 
@@ -597,8 +575,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = CLOSEROUND;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:42:12: ( ')' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:42:14: ')'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:42:12: ( ')' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:42:14: ')'
             {
             match(')'); 
 
@@ -618,8 +596,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:43:8: ( ',' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:43:10: ','
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:43:8: ( ',' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:43:10: ','
             {
             match(','); 
 
@@ -639,8 +617,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = SEM;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:44:8: ( ';' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:44:11: ';'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:44:8: ( ';' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:44:11: ';'
             {
             match(';'); 
 
@@ -660,8 +638,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = ADD_SUB;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:45:10: ( '+' | '-' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:45:10: ( '+' | '-' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             {
             if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
                 input.consume();
@@ -689,8 +667,8 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = MULT_DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:46:10: ( '*' | '/' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:46:10: ( '*' | '/' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             {
             if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
                 input.consume();
@@ -718,10 +696,10 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:48:11: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:48:13: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:48:11: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:48:13: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             {
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:48:13: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:48:13: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             int cnt3=0;
             loop3:
             do {
@@ -735,7 +713,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             	    {
             	    if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
             	        input.consume();
@@ -778,17 +756,17 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = COMMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:49:10: ( ( '/*' ( . )* '*/' ) )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:49:13: ( '/*' ( . )* '*/' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:49:10: ( ( '/*' ( . )* '*/' ) )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:49:13: ( '/*' ( . )* '*/' )
             {
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:49:13: ( '/*' ( . )* '*/' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:49:14: '/*' ( . )* '*/'
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:49:13: ( '/*' ( . )* '*/' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:49:14: '/*' ( . )* '*/'
             {
             match("/*"); 
 
 
 
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:49:19: ( . )*
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:49:19: ( . )*
             loop4:
             do {
                 int alt4=2;
@@ -813,7 +791,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:49:19: .
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:49:19: .
             	    {
             	    matchAny(); 
 
@@ -851,7 +829,7 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = BOOLEANCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:50:14: ( 'true' | 'false' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:50:14: ( 'true' | 'false' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -870,7 +848,7 @@ public class AufgabeMiniPLexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:50:16: 'true'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:50:16: 'true'
                     {
                     match("true"); 
 
@@ -879,7 +857,7 @@ public class AufgabeMiniPLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:50:25: 'false'
+                    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:50:25: 'false'
                     {
                     match("false"); 
 
@@ -903,12 +881,12 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = STRINGCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:51:13: ( '\\'' ( . )* '\\'' )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:51:21: '\\'' ( . )* '\\''
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:51:13: ( '\\'' ( . )* '\\'' )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:51:21: '\\'' ( . )* '\\''
             {
             match('\''); 
 
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:51:26: ( . )*
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:51:26: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -924,7 +902,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:51:26: .
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:51:26: .
             	    {
             	    matchAny(); 
 
@@ -955,10 +933,10 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = REALCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:52:11: ( ( DIGIT )+ '.' ( DIGIT )+ )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:52:13: ( DIGIT )+ '.' ( DIGIT )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:52:11: ( ( DIGIT )+ '.' ( DIGIT )+ )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:52:13: ( DIGIT )+ '.' ( DIGIT )+
             {
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:52:13: ( DIGIT )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:52:13: ( DIGIT )+
             int cnt7=0;
             loop7:
             do {
@@ -972,7 +950,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -999,7 +977,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
             match('.'); 
 
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:52:24: ( DIGIT )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:52:24: ( DIGIT )+
             int cnt8=0;
             loop8:
             do {
@@ -1013,7 +991,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1054,10 +1032,10 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = INTEGERCONST;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:53:14: ( ( DIGIT )+ )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:53:16: ( DIGIT )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:53:14: ( ( DIGIT )+ )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:53:16: ( DIGIT )+
             {
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:53:16: ( DIGIT )+
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:53:16: ( DIGIT )+
             int cnt9=0;
             loop9:
             do {
@@ -1071,7 +1049,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
             	        input.consume();
@@ -1112,13 +1090,13 @@ public class AufgabeMiniPLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:54:5: ( LETTER ( LETTER | DIGIT | '_' )* )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:54:7: LETTER ( LETTER | DIGIT | '_' )*
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:54:5: ( LETTER ( LETTER | DIGIT | '_' )* )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:54:7: LETTER ( LETTER | DIGIT | '_' )*
             {
             mLETTER(); 
 
 
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:54:14: ( LETTER | DIGIT | '_' )*
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:54:14: ( LETTER | DIGIT | '_' )*
             loop10:
             do {
                 int alt10=2;
@@ -1131,7 +1109,7 @@ public class AufgabeMiniPLexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            	    // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             	    {
             	    if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
             	        input.consume();
@@ -1166,8 +1144,8 @@ public class AufgabeMiniPLexer extends Lexer {
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:59:17: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:60:17: ( ( 'a' .. 'z' | 'A' .. 'Z' ) )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1192,8 +1170,8 @@ public class AufgabeMiniPLexer extends Lexer {
     // $ANTLR start "DIGIT"
     public final void mDIGIT() throws RecognitionException {
         try {
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:60:16: ( ( '0' .. '9' ) )
-            // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:61:16: ( ( '0' .. '9' ) )
+            // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:
             {
             if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
                 input.consume();
@@ -1216,236 +1194,228 @@ public class AufgabeMiniPLexer extends Lexer {
     // $ANTLR end "DIGIT"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:8: ( T__34 | OD | DO | WHILE | READ | COMPARATOR | ASSIGNOR | IF | THEN | ELSE | FI | END | PROGRAM | BEGIN | PRINTLN | DATATYPE | OPENROUND | CLOSEROUND | COMMA | SEM | ADD_SUB | MULT_DIV | WS | COMMENTS | BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST | ID )
-        int alt11=29;
+        // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:8: ( OD | DO | WHILE | READ | COMPARATOR | ASSIGNOR | IF | THEN | ELSE | FI | END | PROGRAM | BEGIN | PRINTLN | DATATYPE | OPENROUND | CLOSEROUND | COMMA | SEM | ADD_SUB | MULT_DIV | WS | COMMENTS | BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST | ID )
+        int alt11=28;
         alt11 = dfa11.predict(input);
         switch (alt11) {
             case 1 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:10: T__34
-                {
-                mT__34(); 
-
-
-                }
-                break;
-            case 2 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:16: OD
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:10: OD
                 {
                 mOD(); 
 
 
                 }
                 break;
-            case 3 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:19: DO
+            case 2 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:13: DO
                 {
                 mDO(); 
 
 
                 }
                 break;
-            case 4 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:22: WHILE
+            case 3 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:16: WHILE
                 {
                 mWHILE(); 
 
 
                 }
                 break;
-            case 5 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:28: READ
+            case 4 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:22: READ
                 {
                 mREAD(); 
 
 
                 }
                 break;
-            case 6 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:33: COMPARATOR
+            case 5 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:27: COMPARATOR
                 {
                 mCOMPARATOR(); 
 
 
                 }
                 break;
-            case 7 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:44: ASSIGNOR
+            case 6 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:38: ASSIGNOR
                 {
                 mASSIGNOR(); 
 
 
                 }
                 break;
-            case 8 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:53: IF
+            case 7 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:47: IF
                 {
                 mIF(); 
 
 
                 }
                 break;
-            case 9 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:56: THEN
+            case 8 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:50: THEN
                 {
                 mTHEN(); 
 
 
                 }
                 break;
-            case 10 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:61: ELSE
+            case 9 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:55: ELSE
                 {
                 mELSE(); 
 
 
                 }
                 break;
-            case 11 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:66: FI
+            case 10 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:60: FI
                 {
                 mFI(); 
 
 
                 }
                 break;
-            case 12 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:69: END
+            case 11 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:63: END
                 {
                 mEND(); 
 
 
                 }
                 break;
-            case 13 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:73: PROGRAM
+            case 12 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:67: PROGRAM
                 {
                 mPROGRAM(); 
 
 
                 }
                 break;
-            case 14 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:81: BEGIN
+            case 13 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:75: BEGIN
                 {
                 mBEGIN(); 
 
 
                 }
                 break;
-            case 15 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:87: PRINTLN
+            case 14 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:81: PRINTLN
                 {
                 mPRINTLN(); 
 
 
                 }
                 break;
-            case 16 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:95: DATATYPE
+            case 15 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:89: DATATYPE
                 {
                 mDATATYPE(); 
 
 
                 }
                 break;
-            case 17 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:104: OPENROUND
+            case 16 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:98: OPENROUND
                 {
                 mOPENROUND(); 
 
 
                 }
                 break;
-            case 18 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:114: CLOSEROUND
+            case 17 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:108: CLOSEROUND
                 {
                 mCLOSEROUND(); 
 
 
                 }
                 break;
-            case 19 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:125: COMMA
+            case 18 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:119: COMMA
                 {
                 mCOMMA(); 
 
 
                 }
                 break;
-            case 20 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:131: SEM
+            case 19 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:125: SEM
                 {
                 mSEM(); 
 
 
                 }
                 break;
-            case 21 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:135: ADD_SUB
+            case 20 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:129: ADD_SUB
                 {
                 mADD_SUB(); 
 
 
                 }
                 break;
-            case 22 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:143: MULT_DIV
+            case 21 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:137: MULT_DIV
                 {
                 mMULT_DIV(); 
 
 
                 }
                 break;
-            case 23 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:152: WS
+            case 22 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:146: WS
                 {
                 mWS(); 
 
 
                 }
                 break;
-            case 24 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:155: COMMENTS
+            case 23 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:149: COMMENTS
                 {
                 mCOMMENTS(); 
 
 
                 }
                 break;
-            case 25 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:164: BOOLEANCONST
+            case 24 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:158: BOOLEANCONST
                 {
                 mBOOLEANCONST(); 
 
 
                 }
                 break;
-            case 26 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:177: STRINGCONST
+            case 25 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:171: STRINGCONST
                 {
                 mSTRINGCONST(); 
 
 
                 }
                 break;
-            case 27 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:189: REALCONST
+            case 26 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:183: REALCONST
                 {
                 mREALCONST(); 
 
 
                 }
                 break;
-            case 28 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:199: INTEGERCONST
+            case 27 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:193: INTEGERCONST
                 {
                 mINTEGERCONST(); 
 
 
                 }
                 break;
-            case 29 :
-                // C:\\Users\\Timo\\Desktop\\cipasda\\Aufgabe1\\Teil2\\AufgabeMiniP.g:1:212: ID
+            case 28 :
+                // C:\\Users\\Timo\\Desktop\\CIP-Aufgabe2\\Aufgabe2\\Teil2\\AufgabeMiniP.g:1:206: ID
                 {
                 mID(); 
 
@@ -1460,144 +1430,141 @@ public class AufgabeMiniPLexer extends Lexer {
 
     protected DFA11 dfa11 = new DFA11(this);
     static final String DFA11_eotS =
-        "\2\uffff\4\31\2\uffff\7\31\5\uffff\1\26\3\uffff\1\55\2\uffff\1\56"+
-        "\1\57\2\31\1\62\5\31\1\70\5\31\5\uffff\2\31\1\uffff\4\31\1\106\1"+
-        "\uffff\7\31\1\116\1\117\1\31\1\121\1\122\1\123\1\uffff\6\31\1\132"+
-        "\2\uffff\1\31\3\uffff\1\122\2\31\1\136\2\31\1\uffff\3\31\1\uffff"+
-        "\1\31\2\117\1\145\1\146\1\117\2\uffff";
+        "\1\uffff\4\30\2\uffff\7\30\5\uffff\1\25\3\uffff\1\53\1\uffff\1\54"+
+        "\1\55\2\30\1\60\5\30\1\66\5\30\5\uffff\2\30\1\uffff\4\30\1\104\1"+
+        "\uffff\7\30\1\114\1\115\1\30\1\117\1\120\1\121\1\uffff\6\30\1\130"+
+        "\2\uffff\1\30\3\uffff\1\120\2\30\1\134\2\30\1\uffff\3\30\1\uffff"+
+        "\1\30\2\115\1\143\1\144\1\115\2\uffff";
     static final String DFA11_eofS =
-        "\147\uffff";
+        "\145\uffff";
     static final String DFA11_minS =
-        "\1\11\1\uffff\1\144\1\157\1\150\1\145\2\uffff\1\146\1\150\1\154"+
-        "\1\141\1\162\1\145\1\164\5\uffff\1\52\3\uffff\1\56\2\uffff\2\60"+
-        "\1\151\1\141\1\60\1\164\1\145\1\165\1\163\1\144\1\60\1\154\1\151"+
-        "\1\147\1\157\1\162\5\uffff\1\154\1\144\1\uffff\1\145\1\156\2\145"+
-        "\1\60\1\uffff\1\163\1\147\1\156\1\151\1\154\1\151\1\145\2\60\1\147"+
-        "\3\60\1\uffff\1\145\1\162\1\164\1\156\1\145\1\156\1\60\2\uffff\1"+
-        "\145\3\uffff\1\60\1\141\1\154\1\60\1\141\1\147\1\uffff\1\162\1\155"+
-        "\1\156\1\uffff\1\156\5\60\2\uffff";
+        "\1\11\1\144\1\157\1\150\1\145\2\uffff\1\146\1\150\1\154\1\141\1"+
+        "\162\1\145\1\164\5\uffff\1\52\3\uffff\1\56\1\uffff\2\60\1\151\1"+
+        "\141\1\60\1\164\1\145\1\165\1\163\1\144\1\60\1\154\1\151\1\147\1"+
+        "\157\1\162\5\uffff\1\154\1\144\1\uffff\1\145\1\156\2\145\1\60\1"+
+        "\uffff\1\163\1\147\1\156\1\151\1\154\1\151\1\145\2\60\1\147\3\60"+
+        "\1\uffff\1\145\1\162\1\164\1\156\1\145\1\156\1\60\2\uffff\1\145"+
+        "\3\uffff\1\60\1\141\1\154\1\60\1\141\1\147\1\uffff\1\162\1\155\1"+
+        "\156\1\uffff\1\156\5\60\2\uffff";
     static final String DFA11_maxS =
-        "\1\172\1\uffff\1\144\1\157\1\150\1\145\2\uffff\1\156\1\162\1\156"+
-        "\1\151\1\162\1\157\1\164\5\uffff\1\52\3\uffff\1\71\2\uffff\2\172"+
-        "\1\151\1\141\1\172\1\164\1\145\1\165\1\163\1\144\1\172\1\154\1\157"+
-        "\1\147\1\157\1\162\5\uffff\2\154\1\uffff\1\145\1\156\2\145\1\172"+
-        "\1\uffff\1\163\1\147\1\156\1\151\1\154\1\151\1\145\2\172\1\147\3"+
-        "\172\1\uffff\1\145\1\162\1\164\1\156\1\145\1\156\1\172\2\uffff\1"+
-        "\145\3\uffff\1\172\1\141\1\154\1\172\1\141\1\147\1\uffff\1\162\1"+
-        "\155\1\156\1\uffff\1\156\5\172\2\uffff";
+        "\1\172\1\144\1\157\1\150\1\145\2\uffff\1\156\1\162\1\156\1\151\1"+
+        "\162\1\157\1\164\5\uffff\1\52\3\uffff\1\71\1\uffff\2\172\1\151\1"+
+        "\141\1\172\1\164\1\145\1\165\1\163\1\144\1\172\1\154\1\157\1\147"+
+        "\1\157\1\162\5\uffff\2\154\1\uffff\1\145\1\156\2\145\1\172\1\uffff"+
+        "\1\163\1\147\1\156\1\151\1\154\1\151\1\145\2\172\1\147\3\172\1\uffff"+
+        "\1\145\1\162\1\164\1\156\1\145\1\156\1\172\2\uffff\1\145\3\uffff"+
+        "\1\172\1\141\1\154\1\172\1\141\1\147\1\uffff\1\162\1\155\1\156\1"+
+        "\uffff\1\156\5\172\2\uffff";
     static final String DFA11_acceptS =
-        "\1\uffff\1\1\4\uffff\1\6\1\7\7\uffff\1\21\1\22\1\23\1\24\1\25\1"+
-        "\uffff\1\27\1\26\1\32\1\uffff\1\35\1\1\20\uffff\1\30\1\33\1\34\1"+
-        "\2\1\3\2\uffff\1\10\5\uffff\1\13\15\uffff\1\14\7\uffff\1\5\1\20"+
-        "\1\uffff\1\11\1\31\1\12\6\uffff\1\4\3\uffff\1\16\6\uffff\1\15\1"+
-        "\17";
+        "\5\uffff\1\5\1\6\7\uffff\1\20\1\21\1\22\1\23\1\24\1\uffff\1\26\1"+
+        "\25\1\31\1\uffff\1\34\20\uffff\1\27\1\32\1\33\1\1\1\2\2\uffff\1"+
+        "\7\5\uffff\1\12\15\uffff\1\13\7\uffff\1\4\1\17\1\uffff\1\10\1\30"+
+        "\1\11\6\uffff\1\3\3\uffff\1\15\6\uffff\1\14\1\16";
     static final String DFA11_specialS =
-        "\147\uffff}>";
+        "\145\uffff}>";
     static final String[] DFA11_transitionS = {
-            "\2\25\1\uffff\2\25\22\uffff\1\25\6\uffff\1\27\1\17\1\20\1\26"+
-            "\1\23\1\21\1\1\1\uffff\1\24\12\30\1\7\1\22\3\6\2\uffff\32\31"+
-            "\6\uffff\1\31\1\15\1\31\1\3\1\12\1\13\2\31\1\10\5\31\1\2\1\14"+
-            "\1\31\1\5\1\16\1\11\2\31\1\4\3\31",
-            "",
+            "\2\24\1\uffff\2\24\22\uffff\1\24\6\uffff\1\26\1\16\1\17\1\25"+
+            "\1\22\1\20\1\22\1\uffff\1\23\12\27\1\6\1\21\3\5\2\uffff\32\30"+
+            "\6\uffff\1\30\1\14\1\30\1\2\1\11\1\12\2\30\1\7\5\30\1\1\1\13"+
+            "\1\30\1\4\1\15\1\10\2\30\1\3\3\30",
+            "\1\31",
+            "\1\32",
             "\1\33",
             "\1\34",
-            "\1\35",
-            "\1\36",
             "",
             "",
-            "\1\37\7\uffff\1\40",
-            "\1\41\11\uffff\1\42",
-            "\1\43\1\uffff\1\44",
-            "\1\46\7\uffff\1\45",
-            "\1\47",
-            "\1\50\11\uffff\1\51",
-            "\1\52",
+            "\1\35\7\uffff\1\36",
+            "\1\37\11\uffff\1\40",
+            "\1\41\1\uffff\1\42",
+            "\1\44\7\uffff\1\43",
+            "\1\45",
+            "\1\46\11\uffff\1\47",
+            "\1\50",
             "",
             "",
             "",
             "",
             "",
-            "\1\53",
+            "\1\51",
             "",
             "",
             "",
-            "\1\54\1\uffff\12\30",
+            "\1\52\1\uffff\12\27",
             "",
-            "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\60",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\56",
+            "\1\57",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\61",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\62",
             "\1\63",
             "\1\64",
             "\1\65",
-            "\1\66",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\67",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\71",
-            "\1\73\5\uffff\1\72",
+            "\1\71\5\uffff\1\70",
+            "\1\72",
+            "\1\73",
             "\1\74",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\75",
-            "\1\76",
+            "\1\76\7\uffff\1\77",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\1\77",
-            "\1\100\7\uffff\1\101",
-            "",
+            "\1\100",
+            "\1\101",
             "\1\102",
             "\1\103",
-            "\1\104",
-            "\1\105",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
+            "\1\105",
+            "\1\106",
             "\1\107",
             "\1\110",
             "\1\111",
             "\1\112",
             "\1\113",
-            "\1\114",
-            "\1\115",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\120",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\116",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
+            "\1\122",
+            "\1\123",
             "\1\124",
             "\1\125",
             "\1\126",
             "\1\127",
-            "\1\130",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "",
+            "",
             "\1\131",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "",
+            "",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\132",
             "\1\133",
-            "",
-            "",
-            "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\134",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "\1\135",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\136",
+            "",
             "\1\137",
             "\1\140",
-            "",
             "\1\141",
-            "\1\142",
-            "\1\143",
             "",
-            "\1\144",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\142",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
             "",
             ""
     };
@@ -1632,7 +1599,7 @@ public class AufgabeMiniPLexer extends Lexer {
             this.transition = DFA11_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__34 | OD | DO | WHILE | READ | COMPARATOR | ASSIGNOR | IF | THEN | ELSE | FI | END | PROGRAM | BEGIN | PRINTLN | DATATYPE | OPENROUND | CLOSEROUND | COMMA | SEM | ADD_SUB | MULT_DIV | WS | COMMENTS | BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST | ID );";
+            return "1:1: Tokens : ( OD | DO | WHILE | READ | COMPARATOR | ASSIGNOR | IF | THEN | ELSE | FI | END | PROGRAM | BEGIN | PRINTLN | DATATYPE | OPENROUND | CLOSEROUND | COMMA | SEM | ADD_SUB | MULT_DIV | WS | COMMENTS | BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST | ID );";
         }
     }
  

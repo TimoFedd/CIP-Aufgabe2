@@ -1,14 +1,12 @@
 program
 
-integer zahl1;
-
-
 begin
 
-if (1<2) then 
-asdasd := 'asdasd';
-else
-asdasd := 1+2;
-fi;
+a := 2 + 2;
+
+while(2>3)
+do
+println(test);
+od;
 
 end
