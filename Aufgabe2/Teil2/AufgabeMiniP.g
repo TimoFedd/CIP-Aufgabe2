@@ -5,9 +5,10 @@ output=AST;
 ASTLabelType=CommonTree;
 }
 
-tokens{ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; DECLARATION;}
+tokens{ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; DECLARATION; START;}
 
-start		:	PROGRAM declaration*  BEGIN statement+ END; 
+start		:	PROGRAM declaration*  BEGIN statement+ END
+				-> ^(START declaration* statement+); 
 declaration	:	DATATYPE ID (COMMA ID)* SEM
 				-> ^(DECLARATION DATATYPE ID)+;
 statement       :	(assignment | read_statement | while_statement | if_statement | println)^ SEM!;
