@@ -5,19 +5,20 @@ output=AST;
 ASTLabelType=CommonTree;
 }
 
-tokens{START; DECLARATION; STATEMENT; ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE;}
+tokens{START; DECLARATIONS; DECLARATION; STATEMENTS; ASSIGNMENT; READ_STATEMENT; 
+ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; PRINTLINE;}
 
-start		:	PROGRAM declaration*  BEGIN statement+ END
-				-> ^(START declaration* statement+); 
+
+// Umgeschrieben für Aufteilung AST => so bleiben oder doof wegen Parsebaum?
+start		:	PROGRAM declarations?  BEGIN statements END
+				-> ^(START declarations statements); 
+declarations	:	declaration+
+				-> ^(DECLARATIONS declaration+);				
 declaration	:	DATATYPE ID (COMMA ID)* SEM
-				-> ^(DECLARATION DATATYPE ID)+;
-statement       :	(
-			assignment -> ^(STATEMENT assignment)
-			| read_statement -> ^(STATEMENT read_statement)
-			| while_statement -> ^(STATEMENT while_statement) 
-			| if_statement -> ^(STATEMENT if_statement) 
-			| println -> ^(STATEMENT println)
-			) SEM;
+				-> ^(DECLARATION DATATYPE ID)+;		
+statements	:	statement+
+				-> ^(STATEMENTS statement+);					
+statement       :	(assignment | read_statement | while_statement | if_statement | println) SEM!;
 
 
 assignment 	:	ID ASSIGNOR (
@@ -28,7 +29,7 @@ assignment 	:	ID ASSIGNOR (
 			);
 
 read_statement 	: 	READ OPENROUND ID CLOSEROUND 
-				-> ^(READ ID);
+				-> ^(READ_STATEMENT ID);
 while_statement :	WHILE compare DO statement* OD	
 				-> ^(LOOP compare statement*); 
 // RÜCKFRAGE: So oder anders?				
@@ -43,7 +44,11 @@ alternative	:	ELSE statement+
 
 
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
-println 	:	PRINTLN^ OPENROUND!(ID | STRINGCONST) CLOSEROUND!;
+println 	:	PRINTLN OPENROUND(
+			ID -> ^(PRINTLINE ID)
+			| STRINGCONST -> ^(PRINTLINE STRINGCONST)
+			) CLOSEROUND;
+
 
 constants	:	BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST;
 
