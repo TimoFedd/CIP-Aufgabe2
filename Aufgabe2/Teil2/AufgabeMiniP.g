@@ -10,8 +10,8 @@ ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; PRINTLINE;}
 
 
 // Umgeschrieben für Aufteilung AST => so bleiben oder doof wegen Parsebaum?
-start		:	PROGRAM declarations?  BEGIN statements END
-				-> ^(START declarations statements); 
+start		:	PROGRAM declarations? BEGIN statements END
+				-> ^(START declarations? statements); 
 declarations	:	declaration+
 				-> ^(DECLARATIONS declaration+);				
 declaration	:	DATATYPE ID (COMMA ID)* SEM

@@ -1,4 +1,4 @@
-grammar Aufgabe1;
+grammar dsl;
 
 
 riddle	:	line lineop line linesum line;
