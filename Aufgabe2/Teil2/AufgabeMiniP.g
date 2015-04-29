@@ -20,30 +20,25 @@ statements	:	statement+
 				-> ^(STATEMENTS statement+);					
 statement       :	(assignment | read_statement | while_statement | if_statement | println) SEM!;
 
+			
+assignment      :	ID ASSIGNOR value 
+				->^(ASSIGNMENT ID value );
 
-assignment 	:	ID ASSIGNOR (
-			arithmetic -> ^(ASSIGNMENT ID arithmetic)
-			| compare -> ^(ASSIGNMENT ID compare) 
-			| STRINGCONST -> ^(ASSIGNMENT ID STRINGCONST)
-			| BOOLEANCONST -> ^(ASSIGNMENT ID BOOLEANCONST)
-			);
+value 	:	         (arithmetic  | compare | STRINGCONST | BOOLEANCONST);
 
 read_statement 	: 	READ OPENROUND ID CLOSEROUND 
 				-> ^(READ_STATEMENT ID);
+				
 while_statement :	WHILE compare DO statement* OD	
 				-> ^(LOOP compare statement*); 
-// RÜCKFRAGE: So oder anders?				
-if_statement    :       condition consequence alternative? FI
-				-> ^(CONDITIONAL condition consequence alternative?);
-condition	:	IF compare 
-				-> ^(CONDITION compare);						
-consequence	:	THEN statement+
-				-> ^(CONSEQUENCE statement+);
-alternative	:	ELSE statement+ 
-				-> ^(ALTERNATIVE statement+);				
 
-
+		
+if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI
+				->^(CONDITIONAL compare ^(THEN $ifthen) ^(ELSE $ifelse)? );
+ 
+			
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
+
 println 	:	PRINTLN OPENROUND(
 			ID -> ^(PRINTLINE ID)
 			| STRINGCONST -> ^(PRINTLINE STRINGCONST)
