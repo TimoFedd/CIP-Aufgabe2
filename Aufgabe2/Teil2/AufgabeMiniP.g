@@ -5,10 +5,11 @@ output=AST;
 ASTLabelType=CommonTree;
 }
 
-tokens{ASSIGNMENT; ARITHMETIC;}
+tokens{ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; DECLARATION;}
 
 start		:	PROGRAM declaration*  BEGIN statement+ END; 
-declaration	:	DATATYPE ID (COMMA ID)* SEM;
+declaration	:	DATATYPE ID (COMMA ID)* SEM
+				-> ^(DECLARATION DATATYPE ID)+;
 statement       :	(assignment | read_statement | while_statement | if_statement | println)^ SEM!;
 
 
@@ -21,9 +22,9 @@ assignment 	:	ID ASSIGNOR (
 
 read_statement 	: 	READ OPENROUND ID CLOSEROUND;
 while_statement :	WHILE compare DO statement* OD	
-				-> ^(WHILE compare statement*); 
+				-> ^(LOOP compare statement*); 
 if_statement    :       IF compare THEN statement+ (ELSE statement+)?  FI; 
-				//-> ^(IF compare statement else);
+//				-> ^(CONDITIONAL compare statement+ statement?);
 
 
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
