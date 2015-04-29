@@ -5,7 +5,7 @@ output=AST;
 ASTLabelType=CommonTree;
 }
 
-tokens{ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; DECLARATION; START; STATEMENT;}
+tokens{START; DECLARATION; STATEMENT; ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE;}
 
 start		:	PROGRAM declaration*  BEGIN statement+ END
 				-> ^(START declaration* statement+); 
@@ -31,8 +31,15 @@ read_statement 	: 	READ OPENROUND ID CLOSEROUND
 				-> ^(READ ID);
 while_statement :	WHILE compare DO statement* OD	
 				-> ^(LOOP compare statement*); 
-if_statement    :       IF compare THEN statement+ (ELSE statement+)?  FI; 
-//				-> ^(CONDITIONAL compare statement+ statement?);
+// RÜCKFRAGE: So oder anders?				
+if_statement    :       condition consequence alternative? FI
+				-> ^(CONDITIONAL condition consequence alternative?);
+condition	:	IF compare 
+				-> ^(CONDITION compare);						
+consequence	:	THEN statement+
+				-> ^(CONSEQUENCE statement+);
+alternative	:	ELSE statement+ 
+				-> ^(ALTERNATIVE statement+);				
 
 
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
@@ -42,6 +49,7 @@ constants	:	BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST;
 
 arithmetic	:	mult_expression(ADD_SUB^ mult_expression)*;
 mult_expression :       atom(MULT_DIV^ atom)* ;
+// RÜCKFRAGE: Extrawurzel für Vorzeichen? Ja oder Nein?
 atom		:       ADD_SUB^? (INTEGERCONST | REALCONST) | OPENROUND! arithmetic CLOSEROUND! | ID;
 
 
