@@ -5,13 +5,19 @@ output=AST;
 ASTLabelType=CommonTree;
 }
 
-tokens{ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; DECLARATION; START;}
+tokens{ASSIGNMENT; ARITHMETIC; LOOP; CONDITIONAL; DECLARATION; START; STATEMENT;}
 
 start		:	PROGRAM declaration*  BEGIN statement+ END
 				-> ^(START declaration* statement+); 
 declaration	:	DATATYPE ID (COMMA ID)* SEM
 				-> ^(DECLARATION DATATYPE ID)+;
-statement       :	(assignment | read_statement | while_statement | if_statement | println)^ SEM!;
+statement       :	(
+			assignment -> ^(STATEMENT assignment)
+			| read_statement -> ^(STATEMENT read_statement)
+			| while_statement -> ^(STATEMENT while_statement) 
+			| if_statement -> ^(STATEMENT if_statement) 
+			| println -> ^(STATEMENT println)
+			) SEM;
 
 
 assignment 	:	ID ASSIGNOR (
@@ -21,7 +27,8 @@ assignment 	:	ID ASSIGNOR (
 			| BOOLEANCONST -> ^(ASSIGNMENT ID BOOLEANCONST)
 			);
 
-read_statement 	: 	READ OPENROUND ID CLOSEROUND;
+read_statement 	: 	READ OPENROUND ID CLOSEROUND 
+				-> ^(READ ID);
 while_statement :	WHILE compare DO statement* OD	
 				-> ^(LOOP compare statement*); 
 if_statement    :       IF compare THEN statement+ (ELSE statement+)?  FI; 
