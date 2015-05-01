@@ -6,51 +6,38 @@ ASTLabelType=CommonTree;
 }
 
 tokens{START; DECLARATIONS; DECLARATION; STATEMENTS; ASSIGNMENT; READ_STATEMENT; 
-ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; PRINTLINE;}
+ARITHMETIC; LOOP; CONDITIONAL; CONDITION; PRINTLINE;}
 
 
-// Umgeschrieben für Aufteilung AST => so bleiben oder doof wegen Parsebaum?
-start		:	PROGRAM declarations? BEGIN statements END
-				-> ^(START declarations? statements); 
-declarations	:	declaration+
-				-> ^(DECLARATIONS declaration+);				
-declaration	:	DATATYPE ID (COMMA ID)* SEM
-				-> ^(DECLARATION DATATYPE ID)+;		
-statements	:	statement+
-				-> ^(STATEMENTS statement+);					
-statement       :	(assignment | read_statement | while_statement | if_statement | println) SEM!;
+start		:	PROGRAM declaration*  BEGIN statement+ END  -> ^(START ^(DECLARATIONS declaration*) ^(STATEMENTS statement*)); 
 
-			
-assignment      :	ID ASSIGNOR value 
-				->^(ASSIGNMENT ID value );
+declaration	:	DATATYPE ids+=ID (COMMA ids+=ID)* SEM       -> ^(DATATYPE  $ids*);
 
-value 	:	         (arithmetic  | compare | STRINGCONST | BOOLEANCONST);
-
-read_statement 	: 	READ OPENROUND ID CLOSEROUND 
-				-> ^(READ_STATEMENT ID);
-				
-while_statement :	WHILE compare DO statement* OD	
-				-> ^(LOOP compare statement*); 
-
+statement      :	(assignment | read_statement | while_statement | if_statement | println) SEM!;
 		
-if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI
-				->^(CONDITIONAL compare ^(THEN $ifthen) ^(ELSE $ifelse)? );
- 
-			
+assignment      :	ID ASSIGNOR value ->^(ASSIGNMENT ID value );
+
+value 	        :	(arithmetic  | compare | STRINGCONST | BOOLEANCONST);
+
+read_statement 	: 	READ OPENROUND ID CLOSEROUND -> ^(READ_STATEMENT ID);
+				
+while_statement :	WHILE compare DO statement* OD	-> ^(LOOP compare statement*); 
+	
+if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI  ->^(CONDITIONAL compare ^(THEN $ifthen) ^(ELSE $ifelse)? );
+ 		
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
 
-println 	:	PRINTLN OPENROUND(
-			ID -> ^(PRINTLINE ID)
-			| STRINGCONST -> ^(PRINTLINE STRINGCONST)
-			) CLOSEROUND;
-
-
+println 	:	PRINTLN OPENROUND(ID | STRINGCONST) CLOSEROUND    ->  ^(PRINTLINE ID* STRINGCONST* );
+					
 constants	:	BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST;
 
 arithmetic	:	mult_expression(ADD_SUB^ mult_expression)*;
+
 mult_expression :       atom(MULT_DIV^ atom)* ;
 // RÜCKFRAGE: Extrawurzel für Vorzeichen? Ja oder Nein?
 atom		:       ADD_SUB^? (INTEGERCONST | REALCONST) | OPENROUND! arithmetic CLOSEROUND! | ID;
+
+
 
 
 OD		:       'od';	
