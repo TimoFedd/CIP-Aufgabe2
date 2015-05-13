@@ -6,7 +6,7 @@ ASTLabelType=CommonTree;
 }
 
 tokens{START; DECLARATIONS; DECLARATION; STATEMENTS; ASSIGNMENT; READ_STATEMENT; 
-ARITHMETIC; LOOP; CONDITIONAL; CONDITION; PRINTLINE;}
+ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; PRINTLINE;}
 
 
 start		:	PROGRAM declaration*  BEGIN statement+ END  -> ^(START ^(DECLARATIONS declaration*) ^(STATEMENTS statement*)); 
@@ -23,7 +23,7 @@ read_statement 	: 	READ OPENROUND ID CLOSEROUND -> ^(READ_STATEMENT ID);
 				
 while_statement :	WHILE compare DO statement* OD	-> ^(LOOP compare statement*); 
 	
-if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI  ->^(CONDITIONAL compare ^(THEN $ifthen) ^(ELSE $ifelse)? );
+if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI  ->^(CONDITIONAL ^(CONDITION compare) ^(CONSEQUENCE $ifthen) ^(ALTERNATIVE $ifelse)? );
  		
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
 
