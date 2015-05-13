@@ -6,7 +6,7 @@ ASTLabelType=CommonTree;
 }
 
 tokens{START; DECLARATIONS; DECLARATION; STATEMENTS; ASSIGNMENT; READ_STATEMENT; 
-ARITHMETIC; LOOP; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; PRINTLINE;}
+ARITHMETIC; LOOP; EXECUTION; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; PRINTLINE;}
 
 
 start		:	PROGRAM declaration*  BEGIN statement+ END  -> ^(START ^(DECLARATIONS declaration*) ^(STATEMENTS statement*)); 
@@ -15,19 +15,21 @@ declaration	:	DATATYPE ids+=ID (COMMA ids+=ID)* SEM       -> ^(DATATYPE  $ids*);
 
 statement      :	(assignment | read_statement | while_statement | if_statement | println) SEM!;
 		
-assignment      :	ID ASSIGNOR value ->^(ASSIGNMENT ID value );
+assignment      :	ID ASSIGNOR value -> ^(ASSIGNMENT ID value);
 
-value 	        :	(arithmetic  | compare | STRINGCONST | BOOLEANCONST);
+value 	        :	(arithmetic | compare | STRINGCONST | BOOLEANCONST);
 
 read_statement 	: 	READ OPENROUND ID CLOSEROUND -> ^(READ_STATEMENT ID);
 				
-while_statement :	WHILE compare DO statement* OD	-> ^(LOOP compare statement*); 
+// Achtung: sowas wie "while (true)" nicht möglich, trotzdem iO?
+while_statement :	WHILE compare DO statement* OD	-> ^(LOOP ^(CONDITION compare) ^(EXECUTION statement*)); 
 	
-if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI  ->^(CONDITIONAL ^(CONDITION compare) ^(CONSEQUENCE $ifthen) ^(ALTERNATIVE $ifelse)? );
+if_statement    :       IF compare THEN ifthen=statement+ (ELSE ifelse=statement)?  FI
+				-> ^(CONDITIONAL ^(CONDITION compare) ^(CONSEQUENCE $ifthen) ^(ALTERNATIVE $ifelse)?);
  		
 compare 	:	OPENROUND! (ID | constants) COMPARATOR^ (ID | constants) CLOSEROUND!;  
 
-println 	:	PRINTLN OPENROUND(ID | STRINGCONST) CLOSEROUND    ->  ^(PRINTLINE ID* STRINGCONST* );
+println 	:	PRINTLN OPENROUND(ID | STRINGCONST) CLOSEROUND    ->  ^(PRINTLINE ID* STRINGCONST*);
 					
 constants	:	BOOLEANCONST | STRINGCONST | REALCONST | INTEGERCONST;
 
