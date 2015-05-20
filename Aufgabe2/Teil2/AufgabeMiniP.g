@@ -11,7 +11,7 @@ ARITHMETIC; LOOP; EXECUTION; CONDITIONAL; CONDITION; CONSEQUENCE; ALTERNATIVE; P
 
 start		:	PROGRAM declaration*  BEGIN statement+ END  -> ^(START ^(DECLARATIONS declaration*) ^(STATEMENTS statement*)); 
 
-declaration	:	DATATYPE ids+=ID (COMMA ids+=ID)* SEM       -> ^(DATATYPE  $ids*);
+declaration	:	DATATYPE ID (COMMA ID)* SEM       -> ^(DECLARATION ^(DATATYPE ID))+;
 
 statement      :	(assignment | read_statement | while_statement | if_statement | println) SEM!;
 		
